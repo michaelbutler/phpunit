@@ -88,7 +88,7 @@ class PHPUnit_Util_Blacklist
             self::$directories = [];
 
             foreach (self::$blacklistedClassNames as $className => $parent) {
-                if (!class_exists($className)) {
+                if (@!class_exists($className)) {
                     continue;
                 }
 
